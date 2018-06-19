@@ -1,0 +1,176 @@
+
+
+
+
+
+
+
+
+
+
+//Establece la distancia del cambio de color del nav
+var height_mobile_nav = document.querySelector('.mobile-nav').offsetTop
+ +document.querySelector('.mobile-nav').offsetHeight;
+// // init controller
+
+
+
+
+var controller = new ScrollMagic.Controller();
+
+// build scene
+var scene = new ScrollMagic.Scene({
+      triggerElement: "#quote1",
+      triggerHook: height_mobile_nav / window.innerHeight,
+    })
+    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+    .addTo(controller); 
+    scene.duration(pass);
+
+    function pass(){
+                var height_screen = $("#quote1").outerHeight();
+                if (document.querySelector('.scrollmagic-pin-spacer') != null) {
+                  var margin_bottom_div_scroll = document.querySelector('.scrollmagic-pin-spacer').style.marginBottom;
+                var height_screen = $("#quote1").outerHeight()+parseInt(margin_bottom_div_scroll) ;
+                return height_screen;
+
+                }
+                
+                return height_screen;
+    }
+
+    scene.on("enter", function (event) {
+      $( "#nav span" ).addClass( "change-color" );
+      $( ".title h2" ).addClass( "change-color-title" );
+      console.log("Scene entered.");
+    });
+
+    scene.on("leave", function (event) {
+      $( "#nav span" ).removeClass( "change-color" );
+      $( ".title h2" ).removeClass( "change-color-title" );
+      console.log("Scene leave.");
+    });
+
+    scene.on("progress", function (event) {
+        console.log("Scene progress changed to " + event.progress);
+        console.log("Scene progress changed to " + event.state);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+var controller = new ScrollMagic.Controller();
+
+// build scene
+var scene = new ScrollMagic.Scene({
+      triggerElement: "#quote2",
+      triggerHook: height_mobile_nav / window.innerHeight,
+    })
+    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+    .addTo(controller); 
+    scene.duration(pass);
+
+    function pass(){
+                var height_screen = $("#quote2").outerHeight();
+                if (document.querySelector('.scrollmagic-pin-spacer') != null) {
+                  var margin_bottom_div_scroll = document.querySelector('.scrollmagic-pin-spacer').style.marginBottom;
+                var height_screen = $("#quote2").outerHeight()+parseInt(margin_bottom_div_scroll) ;
+                return height_screen;
+
+                }
+                
+                return height_screen;
+    }
+
+    scene.on("enter", function (event) {
+      $( "#nav span" ).addClass( "change-color" );
+      $( ".title h2" ).addClass( "change-color-title" );
+      console.log("Scene entered.");
+    });
+
+    scene.on("leave", function (event) {
+      $( "#nav span" ).removeClass( "change-color" );
+      $( ".title h2" ).removeClass( "change-color-title" );
+      console.log("Scene leave.");
+    });
+
+    scene.on("progress", function (event) {
+        console.log("Scene progress changed to " + event.progress);
+        console.log("Scene progress changed to " + event.state);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var controller = new ScrollMagic.Controller();
+
+// build scene
+var scene = new ScrollMagic.Scene({
+      triggerElement: "#quote3",
+      triggerHook: height_mobile_nav / window.innerHeight,
+    })
+    .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+    .addTo(controller); 
+    scene.duration(pass);
+
+    function pass(){
+                var height_screen = $("#quote3").outerHeight();
+                if (document.querySelector('.scrollmagic-pin-spacer') != null) {
+                  var margin_bottom_div_scroll = document.querySelector('.scrollmagic-pin-spacer').style.marginBottom;
+                var height_screen = $("#quote3").outerHeight()+parseInt(margin_bottom_div_scroll) ;
+                return height_screen;
+
+                }
+                
+                return height_screen;
+    }
+
+    scene.on("enter", function (event) {
+      $( "#nav span" ).addClass( "change-color" );
+      $( ".title h2" ).addClass( "change-color-title" );
+      console.log("Scene entered.");
+    });
+
+    scene.on("leave", function (event) {
+      $( "#nav span" ).removeClass( "change-color" );
+      $( ".title h2" ).removeClass( "change-color-title" );
+      console.log("Scene leave.");
+    });
+
+    scene.on("progress", function (event) {
+        console.log("Scene progress changed to " + event.progress);
+        console.log("Scene progress changed to " + event.state);
+    });
+
+

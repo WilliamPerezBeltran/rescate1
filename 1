@@ -1,0 +1,40 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+/*Lo primero es incluir la clase en vuestro php*/
+include("metedLaRutaDondePusisteisLaCarpeta/class.phpmailer.php");
+ 
+/*Obviamente, generáis el mensaje*/
+$mensaje="Blablablablabla********"; //puede incluir html, podéis cogerlo de un form...
+ 
+/*Ahora toca crear una variable de la clase phpmailer*/
+$NewMail=new PHPMailer();
+ 
+/*Y luego añadís todos los parámetros que esta necesita para el envío*/
+$NewMail->Host = "localhost"; //El host donde tengáis alojado el correo
+$NewMail->From = "correo@del.remitente"; //El correo del remitente
+$NewMail->FromName = "Nombre remitente"; //Nombre del remitente
+$NewMail->Subject = "asunto"; //El asunto del correo
+$NewMail->AddAddress("emailalqueseenvía@asdsd.com","Nombre");//La dirección del receptor del mail
+$NewMail->Body = $mensaje; //El mensaje
+$NewMail->AltBody = "Relleno Relleno; //relleno
+ 
+/*Y finalmente llamáis al método de envío*/
+$NewMail->Send();
